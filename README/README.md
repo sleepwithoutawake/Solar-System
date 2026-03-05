@@ -1,3 +1,5 @@
+Repository: https://github.com/sleepwithoutawake/Solar-System
+
 # Solar System VR Workbench
 
 A VR application built with **Unity 6.3 LTS** + **XR Interaction Toolkit**,
