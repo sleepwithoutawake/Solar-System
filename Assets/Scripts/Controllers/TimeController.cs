@@ -15,13 +15,13 @@ public class TimeController : MonoBehaviour
         model.SetTime(current);
     }
 
-/*    void Update()
+    void Update()
     {
         if (model == null) return;          // 防止忘记 Init 导致空引用
         if (!model.IsPlaying) return;
 
-        current = current.AddDays(Time.deltaTime * secondsPerDay);
+        current = current.AddDays(Time.deltaTime * secondsPerDay * model.TimeScale);
         model.SetTime(current);
     }
-*/
+
 }

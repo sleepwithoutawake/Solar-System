@@ -16,12 +16,14 @@ public class PlanetSystemController
         this.ephemeris = ephemeris;
         this.planets = planets;
 
+        Debug.Log("[BOOT] PlanetSystemController created with " + planets.Length + " planets");
+
         timeModel.OnTimeChanged += UpdatePlanets;
     }
 
     void UpdatePlanets(DateTime time)
     {
-//        Debug.Log($"[TIME] Updating planets @ {time:O}");
+        Debug.Log("[TIME] Updating " + planets.Length + " planets @ " + time.ToString("yyyy-MM-dd"));
         foreach (var planet in planets)
         {
             Vector3 pos = ephemeris.GetPlanetPosition(planet.planet, time);
