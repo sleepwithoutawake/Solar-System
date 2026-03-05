@@ -50,4 +50,9 @@ public DebugOverlay debugOverlay;
 
         Debug.Log("[BOOT] Application initialized!");
     }
+    void OnDestroy()
+    {
+    controller?.Dispose();
+    Debug.Log("[BOOT] AppBootstrapper destroyed, events cleaned up");
+    }
 }
